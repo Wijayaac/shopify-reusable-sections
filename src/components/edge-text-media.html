@@ -1,0 +1,63 @@
+<!-- assume this component called from root src folder  -->
+<link rel="stylesheet" href="./scss/components/edge-text-media.scss">
+<edge-section data-edge="{{settings.edge_position}}" class="edge-tm-{{settings.background_color}}">
+    <div class="edge-tm">
+        <!-- Here make header tag dynamic on liquid later -->
+        <div class="edge-tm-wrapper flex">
+            <div class="edge-tm-content">
+                <div class="edge-tm-text flex flex-column flex-justify-center">
+                    <if condition="settings.heading !== ''">
+                        <h1 class="{{settings.heading_tag}}">{{settings.heading}}</h1 class="{{settings.heading_tag}}">
+                    </if>
+                    <if condition="settings.subheading !== ''">
+                        <p class="edge-tm-subheading h3">{{settings.subheading}}</p>
+                    </if>
+                    <if condition="settings.description !== ''">
+                        <div class="edge-tm-description">{{{settings.description}}}</div>
+                    </if>
+                    <if condition="settings.buttons !== ''">
+                        <div class="edge-tm-button flex">
+                            <each loop="value, key in settings.buttons">
+                                <if condition="key === 'button_label_1'">
+                                    <a href="{{settings.buttons.button_link_1}}" class="button">{{settings.buttons.button_label_1}}</a>
+                                </if>
+                                <if condition="key === 'button_label_2'">
+                                    <a href="{{settings.buttons.button_link_2}}" class="button">{{settings.buttons.button_label_2}}</a>
+                                </if>
+                            </each>
+                        </div>
+                    </if>
+                </div>
+            </div>
+            <div class="edge-tm-media">
+                <if condition="settings.image !== ''">
+                    <img src="{{settings.image}}" alt="settings.heading">
+                </if>
+            </div>
+        </div>
+    </div>
+</edge-section>
+<script src="./scripts/edge-tm.js" type="script"></script>
+
+<script locals>
+    module.exports = {
+        settings: {
+            // content
+            heading: "heartbeatz", // text
+            heading_tag: "h1", // options
+            image: "/src/images/product-heartbeatz.jpg", // image_picker
+            subheading: "Apple Watch heart rate monitoring, included with every NPE product.", // text
+            description: "<p>heartbeatz technology <strong>allows</strong> you to effortlessly use your Apple Watch as a standard ANT+ or Bluetooth heart rate monitor with any fitness app or equipment.</p>", // richtext
+            buttons: { // custom blocks type buttons
+                button_label_1: "Shop Home Fitness", // text
+                button_link_1: "#", // url
+                button_label_2: "Shop Commercial Fitness", //text
+                button_link_2: "#", // url
+            },
+            // variation
+            edge_position: "right", //radio: left , right
+            margin_bottom: 0, //range -100 ~ 100 step 20
+            background_color: "dark-blue" //options: light-gray, light-blue, dark-blue
+        }
+    }
+</script>
