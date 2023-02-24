@@ -89,6 +89,7 @@ edge-section {
     &-media {
         position: relative;
         padding-top: 60%;
+        background-color: $brand-gray-dark;
 
         img {
             @include image-ratio();
