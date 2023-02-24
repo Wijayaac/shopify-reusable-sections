@@ -1,0 +1,36 @@
+<a href="{{settings.link}}" class="post-item flex flex-column post-item-{{settings.image !== '' ? 'media': 'plain'}}">
+    <if condition="settings.image !== ''">
+        <div class="post-item-image">
+            <img src="{{settings.image}}" alt="settings.heading">
+        </div>
+    </if>
+    <div class="flex flex-column post-item-text">
+        <div class="post-item-content">
+            <if condition="settings.category !== ''">
+                <p class="post-item-category">{{settings.category}}</p>
+            </if>
+            <if condition="settings.heading !== ''">
+                <p class="post-item-heading h4">{{settings.heading}}</p>
+            </if>
+        </div>
+        <p class="post-item-icon flex">
+            <span>Read More</span>
+            <span>
+                <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+                </svg>
+            </span>
+        </p>
+    </div>
+</a>
+
+<script locals>
+    module.exports = {
+        settings: {
+            image: '/src/images/product-home-fitness.jpg', // image from post
+            category: 'Category name', // category from post
+            heading: 'Home fitness has changed. Should your equipment?', // title from post
+            link: "#" // link from post
+        }
+    }
+</script>

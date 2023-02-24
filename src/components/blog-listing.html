@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="./scss/components/post-item.scss">
+<div class="container">
+    <div class="post-wrapper flex">
+        <each loop="item in posts">
+            <include src="components/blog-card.html"></include>
+        </each>
+    </div>
+</div>
+
+<script locals>
+    module.exports = {
+        posts: [1, 2, 3]
+    }
+</script>

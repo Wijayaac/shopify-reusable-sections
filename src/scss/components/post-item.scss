@@ -1,0 +1,62 @@
+@import '../utils/variables';
+@import '../utils/mq';
+@import '../utils/mixins';
+
+.post-item {
+    background-color: $brand-blue-navy;
+    text-decoration: none;
+    min-height: 280px;
+
+    &-media {
+        min-height: 458px;
+    }
+
+
+    margin: 0 7.5px 88px 7.5px;
+
+    &-image {
+        position: relative;
+        width: 100%;
+        padding-top: 56%;
+        background-color: $brand-gray-dark;
+
+        img {
+            @include image-ratio();
+        }
+    }
+
+    &-text {
+        padding: 25px 16px;
+        height: 100%;
+        justify-content: space-between;
+
+        .post-item-plain & {
+            padding: 25px 20px;
+        }
+    }
+
+    &-category,
+    &-heading {
+        color: $brand-gray-light;
+    }
+
+    &-category {
+        margin-bottom: 10px;
+    }
+
+    &-icon {
+        position: relative;
+        color: $brand-orange-accent;
+        margin-left: auto;
+
+        span {
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+
+        svg {
+            width: 40px;
+        }
+    }
+}
