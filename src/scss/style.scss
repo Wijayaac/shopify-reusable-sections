@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import './utils/variables';
+@import './utils/typography';
+@import './utils/reset';
+
+.container {
+    margin: 0 auto;
+    padding: 0 $padding-side;
+    max-width: $width-desktop;
+
+    &.container-small {
+        max-width: 960px;
+    }
+
+    &.container-split {
+        display: flex;
+        flex-direction: row;
+
+        .container-half {
+            flex-grow: 1;
+            width: 50%;
+        }
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+
+            .container-half {
+                width: 100%;
+            }
+        }
+    }
+
+    &.container-sm-no-padding {
+        @media screen and (max-width: $breakpoint-mobile) {
+            padding: 0;
+        }
+    }
+}
+
+
+.flex {
+    display: flex;
+    flex-direction: row;
+
+    &.flex-column {
+        flex-direction: column;
+    }
+
+    &.flex-align-center {
+        align-items: center;
+    }
+
+    &.flex-align-end {
+        align-items: end;
+    }
+
+    &.flex-justify-center {
+        justify-content: center;
+    }
+
+    &.flex-justify-start {
+        justify-content: start;
+    }
+
+    &.flex-justify-end {
+        justify-content: end;
+    }
+
+    &.flex-even-space {
+        &>* {
+            flex-grow: 1;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        &.flex-mobile-column {
+            flex-direction: column;
+        }
+
+        &.flex-mobile-column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        &.flex-mobile-justify-start {
+            justify-content: start;
+        }
+
+        &.flex-mobile-justify-end {
+            justify-content: end;
+        }
+    }
+}
+
+.desktop-only {
+    @media screen and (max-width: $breakpoint-mobile) {
+        display: none !important;
+    }
+}
+
+.mobile-only {
+    @media screen and (min-width: $breakpoint-mobile-min) {
+        display: none !important;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    word-wrap: normal !important;
+}
+
+.visually-hidden--inline {
+    margin: 0;
+    height: 1em;
+}
+
+.button {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 34px;
+    padding: 0 10px;
+    min-width: 240px;
+    max-width: 280px;
+    color: $brand-blue-navy;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    transition: $transition-timing all ease-in-out;
+    background: $brand-blue-light;
+    text-decoration: none;
+    font-family: $brand-font;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    &:hover {
+        color: $brand-blue-medium;
+    }
+}
+
+
+/**
+* End utilities
+*/
+
+// Components
+@import 'components/header';

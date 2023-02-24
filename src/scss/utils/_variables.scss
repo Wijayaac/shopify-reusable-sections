@@ -1,0 +1,35 @@
+$image-path: '';
+
+// $breakpoint-mobile: '580px';
+$breakpoint-mobile: '768px';
+$breakpoint-mobile-min: '769px';
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px) !default;
+
+// Font
+$brand-font: 'Poppins',
+    sans-serif;
+
+$brand-blue-navy: #00003D;
+$brand-blue-medium: #2B709E;
+$brand-blue-light: #33BAD9;
+$brand-blue-flat: #2E4552;
+
+$brand-gray-dark: #A6A8AB;
+$brand-gray-medium: #E5E8E8;
+$brand-gray-light: #F7F7F7;
+$brand-orange-accent: #E08000;
+
+$transition-timing: .325s;
+
+$padding-side: 30px;
+$width-desktop: 1280px;
+
+$spacing-top-bottom: 88px;
+$spacing-top-bottom-mobile: 32px;

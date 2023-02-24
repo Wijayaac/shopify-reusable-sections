@@ -1,0 +1,135 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p,
+.copy,
+ul,
+li {
+  margin-top: 0px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+h1,
+.h1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+  color: $brand-blue-navy;
+  margin-bottom: 22px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+h2,
+.h2 {
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 74px;
+  color: $brand-blue-navy;
+  margin-bottom: 24px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 18px;
+  }
+}
+
+h3,
+.h3 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
+  color: $brand-blue-navy;
+  margin-bottom: 32px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+h4,
+.h4 {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 35px;
+  color: $brand-blue-navy;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+h5,
+.h5 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: $brand-blue-navy;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+p,
+.p,
+.copy,
+table {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: $brand-blue-navy;
+  margin-bottom: 32px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  a {
+    color: $brand-blue-light;
+
+    &:hover,
+    &:active,
+    &:visited {
+      color: $brand-blue-navy;
+    }
+  }
+}
+
+ul {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: $brand-blue-navy;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+// End typography
