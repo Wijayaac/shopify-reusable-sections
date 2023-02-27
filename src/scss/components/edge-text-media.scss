@@ -108,11 +108,11 @@ edge-section {
         }
 
         p,
-        h1 {
+        .edge-tm-title {
             color: inherit;
         }
 
-        h1 {
+        .edge-tm-title {
             @include mq($from: md) {
                 margin-bottom: 17px;
             }

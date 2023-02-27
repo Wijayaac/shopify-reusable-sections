@@ -7,7 +7,7 @@
             <div class="edge-tm-content">
                 <div class="edge-tm-text flex flex-column flex-justify-center">
                     <if condition="settings.heading !== ''">
-                        <h1 class="{{settings.heading_tag}}">{{settings.heading}}</h1 class="{{settings.heading_tag}}">
+                        <h1 class="{{settings.heading_tag}} edge-tm-title">{{settings.heading}}</h1 class="{{settings.heading_tag}}">
                     </if>
                     <if condition="settings.subheading !== ''">
                         <p class="edge-tm-subheading h3">{{settings.subheading}}</p>
@@ -38,7 +38,6 @@
     </div>
 </edge-section>
 <script src="./scripts/edge-tm.js" type="script"></script>
-
 <script locals>
     module.exports = {
         settings: {
